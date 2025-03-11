@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Buzz - 5000+ Professional Excel Templates</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f5f7fa;
+        }
+
+        /* छोटा हेडर स्टाइल */
+        .header {
+            background-color: #1a73e8;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header h1 {
+            font-size: 1.8rem;
+        }
+
+        .product-container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 25px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .product-hero {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .product-image {
+            flex: 1;
+            background: #e3f2fd;
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            min-height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .product-details {
+            flex: 2;
+            padding: 0 1rem;
+        }
+
+        .product-title {
+            color: #1a73e8;
+            margin-bottom: 1.5rem;
+            font-size: 2.4rem;
+            line-height: 1.2;
+        }
+
+        .price-tag {
+            background: #e8f0fe;
+            color: #1a73e8;
+            padding: 1.2rem;
+            border-radius: 8px;
+            font-size: 1.6rem;
+            margin: 1.5rem 0;
+            text-align: center;
+        }
+
+        .features-list {
+            list-style: none;
+            margin: 1.5rem 0;
+        }
+
+        .features-list li {
+            padding: 0.8rem 0;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .buy-button {
+            background: #1a73e8;
+            color: white;
+            padding: 1.2rem 3rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.3rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            display: block;
+            text-align: center;
+        }
+
+        .buy-button:hover {
+            background: #1557b0;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(26,115,232,0.3);
+        }
+
+        .testimonials {
+            margin: 3rem 0;
+            padding: 2.5rem;
+            background: #f8f9fa;
+            border-radius: 12px;
+        }
+
+        .testimonial {
+            margin: 1.5rem 0;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        /* स्टार रेटिंग स्टाइल */
+        .rating-stars {
+            color: #ffc107;
+            margin-bottom: 0.5rem;
+        }
+
+        .rating-stars .fa-star {
+            margin-right: 3px;
+        }
+
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            gap: 4rem;
+            margin: 3rem 0;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            text-align: center;
+            padding: 1rem 2rem;
+            min-width: 200px;
+        }
+
+        .badge i {
+            font-size: 2.5rem;
+            color: #1a73e8;
+            margin-bottom: 1rem;
+        }
+
+        .faq-section {
+            margin: 3rem 0;
+        }
+
+        .faq-item {
+            margin-bottom: 1rem;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: 1.2rem;
+            text-align: left;
+            background: #f8f9fa;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1rem;
+            transition: background 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background: #e3f2fd;
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            padding: 0 1.5rem;
+            background: white;
+            line-height: 1.6;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+            padding: 1.2rem;
+        }
+
+        .faq-icon {
+            transition: transform 0.3s ease;
+            margin-left: 1rem;
+            color: #1a73e8;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        /* छोटा WhatsApp बटन */
+        .whatsapp-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #25D366;
+            color: white;
+            border-radius: 50px;
+            padding: 12px 20px;
+            box-shadow: 0 4px 15px rgba(37,211,102,0.3);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            animation: pulse 2s infinite;
+            font-size: 0.9rem;
+        }
+
+        .whatsapp-button:hover {
+            background: #128C7E;
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(18,140,126,0.4);
+        }
+
+        .whatsapp-button i {
+            font-size: 24px;
+            margin-right: 8px;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.03); }
+            100% { transform: scale(1); }
+        }
+
+        @media (max-width: 768px) {
+            .product-hero {
+                flex-direction: column;
+            }
+            .product-title {
+                font-size: 2rem;
+            }
+            .price-tag {
+                font-size: 1.3rem;
+            }
+            .trust-badges {
+                gap: 2rem;
+            }
+            .testimonials {
+                padding: 1.5rem;
+            }
+            .whatsapp-button {
+                bottom: 15px;
+                right: 15px;
+                padding: 10px 15px;
+                font-size: 0.8rem;
+            }
+            .whatsapp-button i {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Tech Buzz</h1>
+    </header>
+
+    <div class="product-container">
+        <div class="product-hero">
+            <div class="product-image">
+                <i class="fas fa-file-excel" style="font-size: 8rem; color: #1d6f42;"></i>
+                <h3>Instant Digital Download</h3>
+            </div>
+            <div class="product-details">
+                <h1 class="product-title">5000+ Professional Excel Templates Collection</h1>
+                <div class="guarantee-banner">
+                    <i class="fas fa-shield-alt"></i> 30-Day Money Back Guarantee | Secure Checkout
+                </div>
+                <p class="product-description">
+                    Revolutionize your workflow with our massive collection of professionally designed, ready-to-use Excel templates. Perfect for businesses, freelancers, and students.
+                </p>
+                
+                <ul class="features-list">
+                    <li><i class="fas fa-check-circle" style="color: #1d6f42;"></i> 50+ Categories (Finance, Inventory, Project Management)</li>
+                    <li><i class="fas fa-check-circle" style="color: #1d6f42;"></i> Step-by-Step Video Tutorials Included</li>
+                    <li><i class="fas fa-check-circle" style="color: #1d6f42;"></i> Lifetime Free Updates</li>
+                    <li><i class="fas fa-check-circle" style="color: #1d6f42;"></i> 24/7 Priority Support</li>
+                </ul>
+
+                <div class="price-tag">
+                    <span style="text-decoration: line-through; color: #666; margin-right: 15px;">₹4999</span>
+                    <strong>Now Only ₹199</strong><br>
+                    <small>One-Time Payment | No Hidden Charges</small>
+                </div>
+
+                <button class="buy-button" onclick="handleBuy()">
+                    <i class="fas fa-download"></i> Get Instant Access Now
+                </button>
+            </div>
+        </div>
+
+        <div class="trust-badges">
+            <div class="badge">
+                <i class="fas fa-lock"></i>
+                <p>256-bit SSL Encryption</p>
+            </div>
+            <div class="badge">
+                <i class="fas fa-award"></i>
+                <p>Verified by 15K+ Users</p>
+            </div>
+            <div class="badge">
+                <i class="fas fa-clock"></i>
+                <p>Instant Digital Delivery</p>
+            </div>
+        </div>
+
+        <div class="testimonials">
+            <h2 style="text-align: center; margin-bottom: 2rem;">Success Stories from Our Users</h2>
+            
+            <div class="testimonial">
+                <div class="rating-stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p>"These templates saved me 10+ hours weekly! The financial templates alone are worth 10x the price."</p>
+                <p class="author">- Ravi Sharma, Mumbai</p>
+            </div>
+
+            <div class="testimonial">
+                <div class="rating-stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <p>"The quality exceeded my expectations. Customer support helped me customize templates for my startup."</p>
+                <p class="author">- Priya Patel, Delhi</p>
+            </div>
+        </div>
+
+        <div class="faq-section">
+            <h2 style="text-align: center; margin-bottom: 2rem;">Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <button class="faq-question">
+                    What's included in the package?
+                    <i class="fas fa-chevron-down faq-icon"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>You'll receive immediate access to 5000+ Excel templates across 50+ categories, including video tutorials, lifetime updates, and premium support.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Can I edit the templates?
+                    <i class="fas fa-chevron-down faq-icon"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>Absolutely! All templates are fully customizable and come with editing instructions.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a href="https://wa.me/8116365779" class="whatsapp-button" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+        Need Help? Chat Now
+    </a>
+
+    <script>
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const faqItem = button.closest('.faq-item');
+                const isActive = faqItem.classList.contains('active');
+                
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+
+                if (!isActive) {
+                    faqItem.classList.add('active');
+                }
+            });
+        });
+
+        function handleBuy() {
+            alert('Redirecting to secure checkout...');
+        }
+
+        window.addEventListener('scroll', () => {
+            document.querySelectorAll('.testimonial, .faq-item').forEach(el => {
+                const rect = el.getBoundingClientRect();
+                if (rect.top < window.innerHeight * 0.8) {
+                    el.style.opacity = '1';
+                    el.style.transform = 'translateY(0)';
+                }
+            });
+        });
+
+        document.querySelectorAll('.testimonial, .faq-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.6s ease-out';
+        });
+    </script>
+</body>
+</html>
