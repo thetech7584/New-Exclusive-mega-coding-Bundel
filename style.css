@@ -1,0 +1,93 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1B1F3B; /* Dark Navy */
+}
+
+/* Reviews Section */
+.testimonial-container {
+    position: relative;
+    width: 90%;
+    max-width: 400px;
+    margin: auto;
+    overflow: hidden;
+    background: #007BFF; /* Electric Blue */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.testimonial-slider-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.testimonial-slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.testimonial-card {
+    min-width: 100%;
+    padding: 20px;
+    background: transparent;
+    color: #FFFFFF; /* White Text */
+    border-radius: 8px;
+    text-align: center;
+}
+
+.testimonial-card img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    border: 3px solid #FFD700; /* Bright Yellow */
+}
+
+.testimonial-card p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.testimonial-card h3 {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+/* Navigation Buttons */
+.nav-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.nav-btn {
+    background: #FFD700;
+    border: none;
+    padding: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    pointer-events: all;
+}
+
+.nav-btn:hover {
+    background: #ffcc00;
+}
