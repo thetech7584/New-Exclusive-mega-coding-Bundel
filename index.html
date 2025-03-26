@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mega Coding Bundle</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            text-align: center;
+        }
+
+        h1, h2, h3 {
+            color: #2E86C1;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: #1F2833;
+            color: #66FCF1;
+            padding: 50px 0;
+        }
+
+        .hero img {
+            width: 300px;
+            margin: 20px 0;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background: #FFD700;
+            color: #1F2833;
+            padding: 12px 20px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+        /* Product Grid */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            padding: 20px 0;
+        }
+
+        .grid-item {
+            background: #2E86C1;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        .grid-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        /* FAQ */
+        .faq {
+            background: #f9f9f9;
+            padding: 40px 0;
+        }
+
+        details {
+            background: white;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Pricing */
+        .pricing {
+            background: white;
+            padding: 40px 0;
+        }
+
+        /* Footer */
+        footer {
+            background: #1F2833;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        /* Mobile Grid */
+        @media (max-width: 768px) {
+            .grid-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Learn to Code Like a Pro!</h1>
+            <p>Master Your Coding Skills with Our Exclusive Mega Coding Bundle</p>
+            <img src="bundle-mockup.png" alt="Mega Coding Bundle">
+            <a href="#" class="cta-btn">Get Your Bundle Now at ₹299</a>
+        </div>
+    </section>
+
+    <!-- Product Grid -->
+    <section class="container">
+        <h2>The Exclusive Mega Coding Bundle Includes:</h2>
+        <div class="grid-container">
+            <div class="grid-item"><img src="c-course.jpg" alt="C Course"><p>C Course</p></div>
+            <div class="grid-item"><img src="java-course.jpg" alt="Java Course"><p>Java Course</p></div>
+            <div class="grid-item"><img src="python-course.jpg" alt="Python Course"><p>Python Course</p></div>
+            <div class="grid-item"><img src="react-course.jpg" alt="React Course"><p>React Course</p></div>
+        </div>
+    </section>
+
+    <!-- E-Books Grid -->
+    <section class="container">
+        <h2>Top Developer-Recommended E-Books</h2>
+        <div class="grid-container">
+            <div class="grid-item"><img src="python-ebook.jpg" alt="Python E-Book"><p>Python E-Book</p></div>
+            <div class="grid-item"><img src="java-ebook.jpg" alt="Java E-Book"><p>Java E-Book</p></div>
+        </div>
+    </section>
+
+    <!-- Handwritten Notes -->
+    <section class="container">
+        <h2>CS Topper Handwritten Notes</h2>
+        <div class="grid-container">
+            <div class="grid-item"><img src="notes-1.jpg" alt="Student Notes"><p>Handwritten Notes</p></div>
+            <div class="grid-item"><img src="notes-2.jpg" alt="Student Notes"><p>Handwritten Notes</p></div>
+        </div>
+    </section>
+
+    <!-- Pricing & CTA -->
+    <section class="pricing">
+        <div class="container">
+            <h2>Special Offer: ₹299 Only!</h2>
+            <p>Only 50 Spots Left! Don't Miss Out</p>
+            <a href="https://cosmofeed.com/pay/your-link" class="cta-btn">Buy Now</a>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+        <div class="container">
+            <h2>FAQs</h2>
+            <details>
+                <summary>How do I access the bundle?</summary>
+                <p>You will receive an instant download link after payment.</p>
+            </details>
+            <details>
+                <summary>Is there a refund policy?</summary>
+                <p>Yes, we offer a 7-day money-back guarantee.</p>
+            </details>
+            <details>
+                <summary>Can I access this on mobile?</summary>
+                <p>Yes, the content is fully mobile-friendly.</p>
+            </details>
+            <details>
+                <summary>What payment methods are accepted?</summary>
+                <p>We accept UPI, Debit/Credit Cards, and Net Banking.</p>
+            </details>
+            <details>
+                <summary>Is this bundle suitable for beginners?</summary>
+                <p>Yes! It covers beginner to advanced levels.</p>
+            </details>
+        </div>
+    </section>
+
+    <!-- Footer -->
+        <footer>
+        <p>© 2025 Techbuzz. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
