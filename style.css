@@ -63,7 +63,9 @@ body {
 .testimonial-card h3 {
     font-size: 14px;
     opacity: 0.9;
+    color: #FFFFFF; /* Client Name in White */
 }
+
 
 /* Navigation Buttons */
 .nav-buttons {
